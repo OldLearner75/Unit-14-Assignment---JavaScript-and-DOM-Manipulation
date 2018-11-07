@@ -1,16 +1,16 @@
 // from data.js
-var tableData = data;
+let tableData = data;
 
-var tbody = d3.select("tbody");
+let tbody = d3.select("tbody");
 
 function table(data) {
 
   tbody.html("");
 //something is wrong here...
   data.forEach((dataRow) => {
-    var row = tbody.append("tr");
+    let row = tbody.append("tr");
     Object.values(dataRow).forEach((val) => {
-      var ufoInfo = row.append("td");
+      let ufoInfo = row.append("td");
         ufoInfo.text(val);
       }
     );
@@ -21,7 +21,7 @@ function buttonClick() {
 
  d3.event.preventDefault();
 
-  var date = d3.select("#datetime").property("value");
+  let date = d3.select("#datetime").property("value");
   let filteredData = tableData;
 
   if (date) {
